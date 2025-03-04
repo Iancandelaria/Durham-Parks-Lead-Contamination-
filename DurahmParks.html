@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Contamination in Durham Parks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('sources')">Sources</a>
+        <a href="#" onclick="showSection('help')">How to Help</a>
+        <a href="#" onclick="showSection('maps')">Maps</a>
+    </div>
+    
+    <div class="content">
+        <div id="about" class="section active">
+            <h2>About Lead Contamination in Durham Parks</h2>
+            <p>Information about lead contamination levels in local parks.</p>
+        </div>
+        <div id="sources" class="section">
+            <h2>Sources</h2>
+            <p>Data and reports on lead contamination levels.</p>
+        </div>
+        <div id="help" class="section">
+            <h2>How to Help</h2>
+            <p>Ways to contribute to solving the contamination issue.</p>
+        </div>
+        <div id="maps" class="section">
+            <h2>Maps</h2>
+            <p>Visual representations of affected parks.</p>
+        </div>
+    </div>
+</body>
+</html>
